@@ -1,4 +1,4 @@
-name: 'GitHub Actions Weather Bot'
+name: 'Weather Bot'
 
 on:
   push:

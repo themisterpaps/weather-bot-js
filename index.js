@@ -8,6 +8,7 @@ const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('id', '1040652')
 weatherURL.searchParams.set('APPID', weatherToken)
 weatherURL.searchParams.set('units', 'metric')
+weatherURL.searchParams.set('lang','pt')
 
 const getWeatherData = async () => {
   const resp = await fetch(weatherURL.toString())
@@ -15,7 +16,7 @@ const getWeatherData = async () => {
   return body
 }
 const generateWeatherMessage = weatherData =>
-  `O Estado do tempo em ${weatherData.name}: ${weatherData.weather[0].description}°C \n Temperatura é ${weatherData.main.temp}°C \n Min: ${weatherData.main.temp_min}°C \n Max: ${weatherData.main.temp_max}°C`
+  `O Estado do tempo em ${weatherData.name}: ${weatherData.weather[0].description} \n Temperatura é ${weatherData.main.temp}°C \n Min: ${weatherData.main.temp_min}°C \n Max: ${weatherData.main.temp_max}°C`
 
 const main = async () => {
   const weatherData = await getWeatherData()

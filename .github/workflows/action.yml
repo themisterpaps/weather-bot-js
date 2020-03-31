@@ -3,7 +3,7 @@ name: 'Weather Bot'
 on:
   push:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 8 * * *'
 
 jobs:
   bot:

@@ -16,7 +16,7 @@ const getWeatherData = async () => {
   return body
 }
 const generateWeatherMessage = weatherData =>
-  `O Estado do tempo em ${weatherData.name} é de${weatherData.weather[0].description} \n__ \n Temperatura é ${weatherData.main.temp}°C \n Min: ${weatherData.main.temp_min}°C \n Max: ${weatherData.main.temp_max}°C \n Humidade: ${weatherData.main.humidity}Pa \n ____ \n Ventos:\nVelocidade: ${weatherData.wind.speed}Kmh\n  Graus: ${weatherData.wind.deg}° \n _____\n By Mister Paps`
+  `O Estado do tempo em ${weatherData.name} é de ${weatherData.weather[0].description} \n__ \nTemperatura é ${weatherData.main.temp}°C \n Min: ${weatherData.main.temp_min}°C \n Max: ${weatherData.main.temp_max}°C \n Humidade: ${weatherData.main.humidity}Pa \n ____ \n Ventos:\nVelocidade: ${weatherData.wind.speed}Kmh\nGraus: ${weatherData.wind.deg}° \n _____\n By Mister Paps`
 
 const main = async () => {
   const weatherData = await getWeatherData()

@@ -21,7 +21,7 @@ const generateWeatherMessage = weatherData =>
 const main = async () => {
   const weatherData = await getWeatherData()
   const weatherString = generateWeatherMessage(weatherData)
-  bot.sendMessage(process.env.TELEGRAM_CHAT_ID, weatherString)
+  bot.sendMessage([1075573838,process.env.TELEGRAM_CHAT_ID], weatherString)
 }
 
 main()
